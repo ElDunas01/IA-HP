@@ -1,0 +1,120 @@
+LICENCIA AGENTE ISABELLA 1.0
+(Atribución · No Comercial · Uso Responsable)
+Identificador SPDX: LicenseRef-Agente-Isabella-1.0
+
+Copyright (c) 2026 David Ruiz Duarte (viajatech) — https://viajatech.com
+
+La versión en español es la que vale. La traducción al inglés de abajo es solo de cortesía.
+
+1. DEFINICIONES
+   «Obra»: el código, la documentación, las guías, los prompts, los scripts y demás materiales de este repositorio.
+   «Licenciante»: David Ruiz Duarte (viajatech).
+   «Tú»: la persona u organización que usa la Obra.
+   «Obra derivada»: cualquier modificación, traducción, adaptación o trabajo basado en la Obra.
+   «Uso comercial»: cualquier uso cuyo fin principal sea obtener una ventaja comercial o un pago. Incluye vender la Obra
+   o derivados, cobrar por instalarla, configurarla u operarla para otros, ofrecerla como servicio, integrarla en
+   productos, cursos o servicios de pago, y usarla en la operación de un negocio con fines de lucro.
+   No es uso comercial: aprender, experimentar, usarla en tus propios dispositivos, la educación y la investigación sin
+   fines de lucro, y publicar videos, tutoriales o publicaciones gratuitas sobre la Obra (aunque tu canal esté
+   monetizado), siempre que cumplas la sección 3 y no vendas la Obra ni el acceso a ella.
+
+2. CONCESIÓN
+   Si cumples esta licencia, el Licenciante te concede un permiso mundial, gratuito y no exclusivo, que puede terminar
+   conforme a la sección 6, para usar, copiar, modificar y compartir la Obra y Obras derivadas, solo con fines no
+   comerciales.
+
+3. ATRIBUCIÓN (OBLIGATORIA)
+   Si compartes, publicas o distribuyes la Obra, una Obra derivada o contenido que la muestre o se base en ella
+   (repositorios, apps, videos, publicaciones, artículos, cursos gratuitos):
+   a) Da crédito visible con este texto o uno equivalente:
+      «Agente Isabella — creado por David Ruiz Duarte (viajatech) · https://viajatech.com ·
+      https://github.com/viajatech/agente-isabella»
+      En redes sociales, menciona a @viajatech cuando la plataforma lo permita.
+   b) Conserva intactos los archivos LICENSE y NOTICE, los encabezados SPDX y los avisos de autoría del código y de la
+      app (incluidos la línea de crédito de la pantalla principal y los metadatos de autoría del manifiesto).
+   c) Indica si hiciste cambios.
+   d) No des a entender que el Licenciante te respalda o te patrocina.
+
+4. USO RESPONSABLE (CONDICIÓN DE ESTA LICENCIA)
+   No puedes usar la Obra ni Obras derivadas para:
+   a) llamadas no solicitadas, spam, llamadas automáticas masivas o telemarketing;
+   b) fraude, estafas, phishing por voz, extorsión, acoso o amenazas, ni para hacerte pasar por una persona u
+      organización real;
+   c) ocultar que quien habla es una inteligencia artificial: la presentación como IA debe conservarse;
+   d) grabar o procesar conversaciones sin el aviso o el consentimiento que exija la ley aplicable;
+   e) llamar a números que no sean tuyos o de personas que aceptaron recibir la llamada;
+   f) violar leyes (telecomunicaciones, protección de datos, privacidad, consumo) o los términos de servicios de
+      terceros (Google Gemini, Cloudflare, tu compañía telefónica, el fabricante de tu equipo);
+   g) evadir límites, cuotas o controles de servicios de terceros;
+   h) dañar dispositivos, redes o sistemas ajenos.
+
+5. NO COMERCIAL
+   El uso comercial requiere una licencia aparte y por escrito del Licenciante (contacto en https://viajatech.com).
+
+6. TERMINACIÓN Y REVOCACIÓN
+   a) Esta licencia termina automáticamente si incumples cualquiera de sus condiciones.
+   b) Si el incumplimiento es solo de atribución (sección 3) y lo corriges dentro de los 30 días siguientes a enterarte,
+      la licencia se restablece.
+   c) El incumplimiento de la sección 4 (uso responsable) o de la sección 5 (no comercial) revoca la licencia de forma
+      definitiva, salvo autorización por escrito del Licenciante.
+   d) El Licenciante también puede revocar por escrito la licencia a quien haga mal uso de la Obra.
+   e) Al terminar la licencia debes dejar de usar y distribuir la Obra y tus Obras derivadas.
+
+7. TERCEROS Y MARCAS
+   La Obra se usa junto con software y servicios de terceros con sus propias licencias y términos (Magisk, Android SDK,
+   samloader-rs, Google Gemini API, Cloudflare Workers, Node.js, entre otros). Esta licencia no los cubre: debes cumplir
+   los suyos. «Isabella», «Agente Isabella» y «viajatech» identifican al Licenciante; esta licencia no concede derechos
+   de marca, salvo para cumplir la atribución.
+
+8. SIN GARANTÍA
+   LA OBRA SE ENTREGA «TAL CUAL», SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUIDAS LAS DE COMERCIABILIDAD,
+   IDONEIDAD PARA UN FIN DETERMINADO Y NO INFRACCIÓN. Rootear un teléfono, desbloquear su gestor de arranque y flashear
+   firmware puede borrar todos tus datos, anular la garantía, quemar de forma permanente el fusible de seguridad Knox
+   (en Samsung), desactivar funciones como pagos o apps bancarias, o dejar el equipo inservible. Lo haces bajo tu propio
+   riesgo.
+
+9. LIMITACIÓN DE RESPONSABILIDAD
+   En la máxima medida que permita la ley, el Licenciante no responde por ningún daño, pérdida, costo o reclamación
+   (directa, indirecta, incidental o consecuente) que derive de la Obra o de su uso, incluidos daños al equipo, pérdida
+   de datos, cargos de servicios de terceros o consecuencias legales. Tú eres el único responsable del uso que le des a
+   la Obra y de cumplir la ley.
+
+10. DISPOSICIONES GENERALES
+   Esta licencia se rige por las leyes de los Estados Unidos Mexicanos. Si una disposición resulta inválida, las demás
+   siguen vigentes. Nada en esta licencia limita derechos que la ley te otorgue y que no puedan renunciarse.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+AGENTE ISABELLA LICENSE 1.0 (Attribution · NonCommercial · Responsible Use) — English courtesy translation
+The Spanish text above prevails.
+
+Copyright (c) 2026 David Ruiz Duarte (viajatech) — https://viajatech.com
+
+1. "Work": the code, docs, guides, prompts and scripts in this repository. "Licensor": David Ruiz Duarte (viajatech).
+   "Commercial use": any use primarily intended for commercial advantage or payment (selling the Work or derivatives,
+   charging to install/configure/operate it for others, offering it as a service, bundling it into paid products,
+   courses or services, or using it to run a for-profit business). Learning, personal use on your own devices,
+   non-profit education/research, and free videos/tutorials/posts about the Work (even on a monetized channel) are not
+   commercial use, provided you comply with section 3 and do not sell the Work or access to it.
+2. Grant: a worldwide, royalty-free, non-exclusive license, terminable under section 6, to use, copy, modify and share
+   the Work and derivatives for non-commercial purposes only.
+3. Attribution (required) when sharing the Work, a derivative, or content showing or based on it: credit
+   "Agente Isabella — created by David Ruiz Duarte (viajatech) · https://viajatech.com ·
+   https://github.com/viajatech/agente-isabella" and mention @viajatech on social media where possible; keep LICENSE,
+   NOTICE, SPDX headers and in-app authorship notices intact; state your changes; do not imply endorsement.
+4. Responsible use (a license condition). Do not use the Work for unsolicited/spam/robo/telemarketing calls; fraud,
+   scams, voice phishing, extortion, harassment or impersonating real people or organizations; hiding that the speaker
+   is an AI; recording without legally required notice/consent; calling numbers that are not yours or whose owners did
+   not consent; breaking laws or third-party terms (Google Gemini, Cloudflare, your carrier, your device maker);
+   circumventing third-party limits; harming others' devices, networks or systems.
+5. Commercial use requires a separate written license from the Licensor (contact via https://viajatech.com).
+6. Termination: automatic upon any breach. Attribution-only breaches are cured if fixed within 30 days of notice.
+   Breaches of sections 4 or 5 permanently revoke the license unless the Licensor agrees in writing. The Licensor may
+   also revoke the license in writing for misuse. Upon termination, stop using and distributing the Work.
+7. Third-party software/services keep their own licenses and terms. No trademark rights are granted except for
+   attribution.
+8. NO WARRANTY: THE WORK IS PROVIDED "AS IS". Rooting, unlocking bootloaders and flashing firmware may wipe your data,
+   void your warranty, permanently trip Samsung Knox, disable payments/banking apps or brick your device. At your own
+   risk.
+9. LIMITATION OF LIABILITY: to the maximum extent permitted by law, the Licensor is not liable for any damages, losses,
+   third-party charges or legal consequences arising from the Work or its use. You alone are responsible for your use.
+10. Governed by the laws of Mexico. Invalid provisions do not affect the rest.

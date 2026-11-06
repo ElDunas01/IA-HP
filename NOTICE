@@ -1,0 +1,26 @@
+Agente Isabella
+Copyright (c) 2026 David Ruiz Duarte (viajatech) — https://viajatech.com
+
+Required Notice: Agente Isabella — creado por David Ruiz Duarte (viajatech) · https://viajatech.com · https://github.com/viajatech/agente-isabella
+
+Licencia: LicenseRef-Agente-Isabella-1.0 (ver LICENSE). Atribución obligatoria · uso no comercial · uso responsable.
+Este aviso debe conservarse en toda copia o Obra derivada.
+
+Créditos del proyecto original
+- Idea, dirección, pruebas en hardware real y dueño del proyecto: David Ruiz Duarte (viajatech).
+- Desarrollo asistido por agentes de IA (Claude: Fable 5.1, Opus 4.7 y Opus 5.5) bajo la dirección de David.
+
+Redes de viajatech
+- Sitio: https://viajatech.com · Isabella en vivo: https://viajatech.com/isabella
+- YouTube: https://www.youtube.com/@viajatech · Instagram: https://www.instagram.com/viajatech/
+- TikTok: https://www.tiktok.com/@viajatech · X: https://x.com/viajatech · Threads: https://www.threads.com/@viajatech
+- GitHub: https://github.com/viajatech
+
+Software y servicios de terceros que usa la guía (NO incluidos en este repositorio; cada uno con su licencia y términos)
+- Magisk (topjohnwu) — GPL-3.0 — https://github.com/topjohnwu/Magisk
+- samloader-rs (topjohnwu) — https://github.com/topjohnwu/samloader-rs
+- Android SDK Build-Tools y Platform-Tools (Google) — Android Software Development Kit License
+- Eclipse Temurin JDK 17 (Adoptium) — GPLv2 con Classpath Exception
+- Cloudflare Wrangler / Workers — términos de Cloudflare
+- ws (npm, para las pruebas locales) — MIT
+- Google Gemini API (Gemini Live, voz «Zephyr») — términos de las APIs de Google

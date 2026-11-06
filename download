@@ -1,5 +1,34 @@
-.wrangler/
-.dev.vars*
-.env*
+# ─── Agente Isabella · NUNCA subir secretos ni binarios firmados ───
+# Llave de firma (es TUYA; respáldala fuera de git)
+llaves/
+*.jks
+*.keystore
+# Tu configuración local y secretos
+mi_config.env
+secretos/
+.env
+.env.*
+!.env.example
+.dev.vars
+*.secret
+secreto.txt
+# Compilados y descargas
+build/
+*.apk
+*.zip
+*.tar
+*.tar.md5
+*.img
+apps/*/entregas/
+# Firmware / Magisk (se bajan de sus fuentes oficiales, no se versionan)
+firmware/
+# Node / Python / sistema
 node_modules/
-src/setup.json.nuevo
+.wrangler/
+__pycache__/
+*.pyc
+.DS_Store
+# Registros de pruebas (pueden traer números o voces)
+herramientas/llamadas/registros/
+*.wav
+*.log
