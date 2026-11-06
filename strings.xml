@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 David Ruiz Duarte (viajatech) <https://viajatech.com> -->
+<!-- SPDX-License-Identifier: LicenseRef-Agente-Isabella-1.0 -->
+<!-- Agente Isabella · Autor: David Ruiz Duarte (viajatech). Uso no comercial y con atribución: ver LICENSE y NOTICE. -->
+<resources>
+    <string name="app_name">Isabella Llamadas</string>
+    <string name="acc_descripcion">Opcional y apagado por defecto. Solo sirve para que la app pueda oír, por el altavoz, a la persona de la llamada durante las pruebas de Isabella en este celular. No lee la pantalla ni actúa por ti. Lo activas y lo apagas tú desde la Mac (adb).</string>
+</resources>

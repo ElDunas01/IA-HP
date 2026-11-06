@@ -1,0 +1,25 @@
+// SPDX-FileCopyrightText: 2026 David Ruiz Duarte (viajatech) <https://viajatech.com>
+// SPDX-License-Identifier: LicenseRef-Agente-Isabella-1.0
+{
+  // Worker de tokens efímeros para la app Isabella Llamadas (Agente Isabella). Guía: AGENTS.md (fase 3)
+  "name": "agente-isabella-token",
+  // Tu cuenta la toma wrangler de `npx wrangler login`. Solo si tienes VARIAS cuentas, descomenta y pon tu account_id:
+  // "account_id": "TU_ACCOUNT_ID",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-01",
+  // URL pública gratis:  https://agente-isabella-token.<tu-subdominio>.workers.dev/token
+  "workers_dev": true,
+  "preview_urls": false,
+  // (Opcional) dominio propio en una zona tuya de Cloudflare:
+  // "routes": [{ "pattern": "isabella.tudominio.com", "custom_domain": true }],
+  "kv_namespaces": [
+    // Créalo una vez con:  npx wrangler kv namespace create TOPES   y pega aquí el "id" que te devuelve.
+    { "binding": "TOPES", "id": "PEGA_AQUI_EL_ID_DE_TU_KV" }
+  ],
+  // Topes anti-abuso y anti-gasto: máximo de tokens por minuto y por día. Súbelos con cuidado.
+  "vars": { "TOPE_MINUTO": "3", "TOPE_DIA": "30" },
+  // Secretos: NUNCA en este archivo ni en git. Se suben con:
+  //   npx wrangler secret put GEMINI_API_KEY_AQ    (tu llave de Google AI Studio)
+  //   npx wrangler secret put LAB_DEVICE_SECRET    (el secreto de tu cel; lo sube configurar_app.sh)
+  "observability": { "enabled": true }
+}

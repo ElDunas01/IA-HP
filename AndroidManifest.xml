@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 David Ruiz Duarte (viajatech) <https://viajatech.com> -->
+<!-- SPDX-License-Identifier: LicenseRef-Agente-Isabella-1.0 -->
+<!-- Agente Isabella · Autor: David Ruiz Duarte (viajatech). Uso no comercial y con atribución: ver LICENSE y NOTICE. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.viajatech.lab.isabellallamadas">
+
+    <!-- Puente TCP con la Mac -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Que el Wi-Fi y la CPU no se duerman con la pantalla apagada durante la llamada -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Marcar, seguir el estado de la llamada y colgar -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+    <!-- InCallService OPCIONAL: solo opera si el appop MANAGE_ONGOING_CALLS se concede por adb. -->
+    <uses-permission android:name="android.permission.MANAGE_ONGOING_CALLS" />
+
+    <!-- Micrófono (interlocutor por el altavoz) y altavoz -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- Aviso de la llamada y servicio en primer plano de tipo micrófono.
+         NO usamos FOREGROUND_SERVICE_PHONE_CALL: su política exige ser marcador
+         predeterminado o declarar MANAGE_OWN_CALLS (apps VoIP). Ver README, decisión 5. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+
+    <application
+        android:allowBackup="false"
+        android:networkSecurityConfig="@xml/red_pruebas"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+        <!-- Agente Isabella · autor: David Ruiz Duarte (viajatech) · https://viajatech.com -->
+        <meta-data android:name="com.viajatech.autor" android:value="David Ruiz Duarte (viajatech)" />
+        <meta-data android:name="com.viajatech.huella" android:value="QWdlbnRlIElzYWJlbGxhIC0gRGF2aWQgUnVpeiBEdWFydGUgKHZpYWphdGVjaCkgLSB2aWFqYXRlY2guY29t" />
+
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Servicio en primer plano de la llamada. Exportado SOLO para quien tenga DUMP
+             (la conexión de adb de la Mac), con la misma convención del kit (lección 3):
+             así el agente `dispositivo` lo maneja con `am start-foreground-service`.
+             foregroundServiceType=microphone: el micrófono queda disponible mientras corre. -->
+        <service
+            android:name=".LlamadaService"
+            android:exported="true"
+            android:foregroundServiceType="microphone"
+            android:permission="android.permission.DUMP" />
+
+        <!-- Servicio de accesibilidad OPCIONAL, apagado por defecto. Única razón: que la app pueda
+             oír el altavoz durante la llamada (Android silencia el micrófono a una app normal en
+             llamada; la excepción de Google es ser servicio de accesibilidad). No lee la pantalla.
+             Lo habilita y lo apaga el dueño del cel por adb (ver docs). -->
+        <service
+            android:name=".ServicioAccesibilidad"
+            android:exported="true"
+            android:label="Isabella (oír la llamada)"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accesibilidad" />
+        </service>
+
+        <!-- InCallService OPCIONAL y NO visual (IN_CALL_SERVICE_UI=false). El sistema solo lo liga
+             si el appop MANAGE_ONGOING_CALLS está concedido (por adb en el cel de pruebas). Sin eso
+             no se liga y la app funciona por la ruta clásica. BIND_INCALL_SERVICE lo exige el sistema. -->
+        <service
+            android:name=".ServicioEnLlamada"
+            android:exported="true"
+            android:permission="android.permission.BIND_INCALL_SERVICE">
+            <meta-data
+                android:name="android.telecom.IN_CALL_SERVICE_UI"
+                android:value="false" />
+            <intent-filter>
+                <action android:name="android.telecom.InCallService" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

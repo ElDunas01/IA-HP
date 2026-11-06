@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 David Ruiz Duarte (viajatech) <https://viajatech.com> -->
+<!-- SPDX-License-Identifier: LicenseRef-Agente-Isabella-1.0 -->
+<!-- Agente Isabella · Autor: David Ruiz Duarte (viajatech). Uso no comercial y con atribución: ver LICENSE y NOTICE. -->
+<!--
+    Lista blanca de permisos privilegiados para com.viajatech.lab.isabellallamadas.
+
+    Con `ro.control_privapp_permissions=enforce` (SM-A725M TCE), el framework de permisos no
+    concede un permiso privilegiado a una app en /system/priv-app a menos que esté en esta
+    lista blanca. Sin esta lista, el `grantPermission` interno falla silenciosamente y la app
+    queda sin el permiso.
+
+    Permisos declarados aquí:
+      - CALL_AUDIO_INTERCEPTION  → getCallUplinkInjectionAudioTrack / getCallDownlinkExtractionAudioRecord
+      - MODIFY_PHONE_STATE       → requerido por isCallAudioAccessible / modo in-call music (I-1)
+      - CAPTURE_AUDIO_OUTPUT     → ruta E-1 cuando no hay flag INTERCEPTION disponible
+      - MODIFY_AUDIO_ROUTING     → setPreferredDevice a Telephony Tx (I-1), control de la ruta
+
+    Verificación tras reinicio:
+      dumpsys package com.viajatech.lab.isabellallamadas | grep -E 'CALL_AUDIO|MODIFY_PHONE|CAPTURE_AUDIO|MODIFY_AUDIO'
+    Los 4 deben aparecer como "granted=true".
+
+    Documento de referencia: docs/ARQUITECTURA.md
+-->
+<permissions>
+    <privapp-permissions package="com.viajatech.lab.isabellallamadas">
+        <permission name="android.permission.CALL_AUDIO_INTERCEPTION"/>
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+        <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
+    </privapp-permissions>
+</permissions>

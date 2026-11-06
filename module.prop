@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 David Ruiz Duarte (viajatech) <https://viajatech.com>
+# SPDX-License-Identifier: LicenseRef-Agente-Isabella-1.0
+# Agente Isabella · Autor: David Ruiz Duarte (viajatech). Uso no comercial y con atribución: ver LICENSE y NOTICE.
+id=isabellallamadas-privapp
+name=Isabella Llamadas (priv-app + lista blanca)
+version=v1.0
+versionCode=29886190
+author=viajatech / agente-isabella
+description=Instala com.viajatech.lab.isabellallamadas como app privilegiada (system/priv-app) y le concede CALL_AUDIO_INTERCEPTION, MODIFY_PHONE_STATE, CAPTURE_AUDIO_OUTPUT y MODIFY_AUDIO_ROUTING. Sin esto, con ro.control_privapp_permissions=enforce, el framework no concede esos permisos aunque la app los declare.
+updateJson=

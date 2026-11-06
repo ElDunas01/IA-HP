@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2026 David Ruiz Duarte (viajatech) <https://viajatech.com> -->
+<!-- SPDX-License-Identifier: LicenseRef-Agente-Isabella-1.0 -->
+<!-- Agente Isabella · Autor: David Ruiz Duarte (viajatech). Uso no comercial y con atribución: ver LICENSE y NOTICE. -->
+<!--
+  Red de la app. Todo va con TLS salvo el modo prueba: HTTP sin cifrar SOLO hacia el propio cel
+  (127.0.0.1 con `adb reverse`, lo recomendado) (para el Worker local de `wrangler dev`).
+  Si pruebas el Worker local desde el Wi-Fi de tu casa, agrega abajo la IP de TU Mac. El WebSocket del mock no pasa por aquí (socket propio, ya amarrado
+  en código a IPs privadas). El Worker de producción se exige https:// en código.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+</network-security-config>

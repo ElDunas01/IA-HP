@@ -1,0 +1,14 @@
+{
+  "name": "agente-isabella-token-worker",
+  "private": true,
+  "type": "module",
+  "description": "Worker de Cloudflare que acuña tokens efímeros de Gemini Live para la app Isabella Llamadas — Agente Isabella, por David Ruiz Duarte (viajatech)",
+  "author": "David Ruiz Duarte (viajatech) <https://viajatech.com>",
+  "license": "SEE LICENSE IN ../LICENSE",
+  "scripts": {
+    "genera-setup": "node ../puente/genera-setup.mjs > src/setup.json.nuevo && mv src/setup.json.nuevo src/setup.json",
+    "prueba": "node prueba-local.mjs",
+    "desplegar": "wrangler deploy"
+  },
+  "devDependencies": { "wrangler": "^4" }
+}
